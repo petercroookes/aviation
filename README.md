@@ -3,10 +3,13 @@
 Simple (super low order) model of global aviation. Enjoy!
 
 ## Basic Model
+The "required global fleet" can be estimated using a very simple model that assumes the number of passengers flying globally annually is known, along with an estimation of the number of seats flown globally per day.
 
-Many assumptions are made to make the model simple. These include assuming the same aircraft services the same route all year round, reducing the model to the following two equations:
+Many assumptions are made to make the model simple. These include assuming the same aircraft services the same route all year round. Given that the two sources used in this model are given in different time bases, they are converted to per day values to maintain consistency. The first equation gives an estimate of the global passengers flying per day:
 
 $\text{Passengers Per Day} = \frac{\text{Passengers Per Year}}{\text{Days Per Year}}$
+
+The total required global fleet can then be calculated as a function of this intermediate value and the other inputs:
 
 $\text{Required Global Fleet} = \frac{\text{Passengers Per Day}}{\text{Seats Per Aircraft}\ \times\ \text{Flights Per Aircraft Per Day}}$
 
