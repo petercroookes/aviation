@@ -10,7 +10,7 @@ $\text{Passengers Per Day} = \frac{\text{Passengers Per Year}}{\text{Days Per Ye
 
 $\text{Required Global Fleet} = \frac{\text{Passengers Per Day}}{\text{Seats Per Aircraft}\ \times\ \text{Flights Per Aircraft Per Day}}$
 
-With the equations established, we can assign values to these variables real world data from 2023 and a bit of guess work:
+With the equations established, we can assign values to these variables using real world data from 2023 and a bit of guess work:
 
 | Variable | Value | Source |
 | -------- | ----- | ------ |
