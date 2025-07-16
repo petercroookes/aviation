@@ -7,6 +7,7 @@ nav:
   - Aviation Model: 'aviation.md'
 
 markdown_extensions:
+  - footnotes
   - pymdownx.caret
   - pymdownx.tilde
   - pymdownx.arithmatex:
@@ -15,3 +16,8 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+  - bibtex:
+      bib_file: "https://api.zotero.org/groups/5782724/collections/G847TDER/items?format=bibtex"
