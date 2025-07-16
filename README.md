@@ -9,12 +9,11 @@ The purpose of this model is to estimate the global aircraft fleet requirement f
 
 ### Dependencies
 
-Install the dependencies using a virtual environment [venv](https://docs.python.org/3/library/venv.html) by running the following commands:
+This repository uses [uv](https://docs.astral.sh/uv/) for project and package management. The file [`pyproject.toml`](pyproject.toml) defines the dependency bounds and [`uv.lock`](uv.lock) specifies the locked environment.
+To create the virtual environment from lockfile, ensure you have uv installed and run the following command:
 
 ```
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+uv sync
 ```
 
 ## Documentation
