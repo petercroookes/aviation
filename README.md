@@ -16,10 +16,19 @@ To create the virtual environment from lockfile, ensure you have uv installed an
 uv sync
 ```
 
+### Model
+This model contains a single analysis script [`aviation.py`](aviation.py) which implements the simple model for global aviation outlined in the documentation (see below), giving the global fleet requirement.
+
+To execute the analysis script, run:
+
+```
+uv run python aviation.py
+```
+
 ## Documentation
 
 The model's documentation was created using [MkDocs](https://mkdocs.org), the source files of which can be found in the `docs/` directory. The `mkdocs.yml` file allows customisation and configuration of the site. The documentation site can be activated locally using the following command:
 
 ```
-mkdocs serve
+uv run mkdocs serve
 ```
