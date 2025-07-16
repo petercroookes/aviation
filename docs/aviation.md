@@ -25,8 +25,8 @@ With the equations established, we can assign values to these variables using re
 
 | Variable | Value | Unit | Source |
 | -------- | ----- | ----- | ------ |
-| Passengers Per Year | $8.7 \times 10^9$ | year^-1^ | ACI [^1] |
-| Seats Per Aircraft | $181$ | - | CAA [^2] |
+| Passengers Per Year | $8.7 \times 10^9$ | year^-1^ | ACI [@aciTrafficForecasts] |
+| Seats Per Aircraft | $181$ | - | CAA [@caaAviationTrends] |
 | Flights Per Aircraft Per Day | $4$ | day^-1^ | Guess |
 
 Putting these numbers into Equations $\ref{eq:1}$ and $\ref{eq:2}$:
@@ -44,7 +44,3 @@ $$
     \label{eq:4}
 \end{equation}
 $$
-
-[^1]: Airports International Council  World Airport Traffic Forecasts 2023-2052. Value from 2023. [Link](https://store.aci.aero/wp-content/uploads/2024/02/WATF-Executive-Summary.pdf)
-
-[^2]: Civil Aviation Authority Quarterly Statistics. Value from 2023. [Link](https://www.caa.co.uk/data-and-analysis/uk-aviation-market/airports/uk-airport-data/latest-quarterly-statistics/)
