@@ -5,11 +5,15 @@ The "required global fleet" can be estimated using a very simple model that assu
 
 Many assumptions are made to make the model simple. These include assuming the same aircraft services the same route all year round. Given that the two sources used in this model are given in different time bases, they are converted to per day values to maintain consistency. The first equation gives an estimate of the global passengers flying per day:
 
-$\text{Passengers Per Day} = \frac{\text{Passengers Per Year}}{\text{Days Per Year}}$
+$$
+\text{Passengers Per Day} = \frac{\text{Passengers Per Year}}{\text{Days Per Year}}
+$$
 
 The total required global fleet can then be calculated as a function of this intermediate value and the other inputs:
 
-$\text{Required Global Fleet} = \frac{\text{Passengers Per Day}}{\text{Seats Per Aircraft}\ \times\ \text{Flights Per Aircraft Per Day}}$
+$$
+\text{Required Global Fleet} = \frac{\text{Passengers Per Day}}{\text{Seats Per Aircraft}\ \times\ \text{Flights Per Aircraft Per Day}}
+$$
 
 With the equations established, we can assign values to these variables using real world data from 2023 and a bit of guess work:
 
@@ -21,10 +25,13 @@ With the equations established, we can assign values to these variables using re
 
 Putting these numbers into the equations:
 
-$\text{Passengers Per Day} = \frac{8.7 \times 10^9}{365.25} = 2.4 \times 10^7$
+$$
+\text{Passengers Per Day} = \frac{8.7 \times 10^9}{365.25} = 2.4 \times 10^7
+$$
 
-$\text{Required Global Fleet} = \frac{2.4 \times 10^7}{181 \times\ 4} = 33149$
-
+$$
+\text{Required Global Fleet} = \frac{2.4 \times 10^7}{181 \times\ 4} = 33149
+$$
 
 [^1]: Airports International Council  World Airport Traffic Forecasts 2023-2052. Value from 2023. `https://store.aci.aero/wp-content/uploads/2024/02/WATF-Executive-Summary.pdf`
 
