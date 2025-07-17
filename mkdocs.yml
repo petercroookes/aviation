@@ -3,8 +3,8 @@ theme:
   name: material
 
 nav:
-  - Home: 'index.md'
-  - Aviation Model: 'aviation.md'
+  - Home: "index.md"
+  - Aviation Model: "aviation.md"
 
 markdown_extensions:
   - footnotes
