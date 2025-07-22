@@ -18,9 +18,9 @@ def calculate_required_global_fleet(
     """Calculate the size of the required global fleet.
 
     Args:
-    passengers_per_day (float): The average number of passengers that fly daily.
-    seats_per_aircraft (float): The average number of seats per aircraft.
-    flights_per_aircraft_per_day (float): The average number of flight per aircraft per day.
+        passengers_per_day (float): The average number of passengers that fly daily.
+        seats_per_aircraft (float): The average number of seats per aircraft.
+        flights_per_aircraft_per_day (float): The average number of flight per aircraft per day.
 
     """
     return passengers_per_day / (seats_per_aircraft * flights_per_aircraft_per_day)
