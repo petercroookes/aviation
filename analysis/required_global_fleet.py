@@ -1,3 +1,5 @@
+"""Analysis to determine the global fleet requirement based on average passenger and flight data."""
+
 import aviation
 
 passengers_per_year = 9_000_000_000.0

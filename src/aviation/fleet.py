@@ -1,4 +1,4 @@
-"""Modelling of the global fleet using average passenger flight data"""
+"""Modelling of the global fleet using average passenger flight data."""
 
 
 def calculate_passengers_per_day(passengers_per_year, days_per_year):
