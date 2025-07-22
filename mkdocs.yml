@@ -18,6 +18,9 @@ extra_javascript:
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
+  - mkdocstrings
   - search
   - bibtex:
       bib_file: "https://api.zotero.org/groups/5782724/collections/G847TDER/items?format=bibtex"
+  - mkdocs-prebuild:
+      base_path: ["."]
