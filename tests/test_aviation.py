@@ -1,6 +1,6 @@
 import pytest
 
-from aviation.aviation import calculate_passengers_per_day, calculate_required_global_fleet
+from aviation.fleet import calculate_passengers_per_day, calculate_required_global_fleet
 
 
 @pytest.mark.parametrize(
