@@ -2,6 +2,7 @@ import typing
 
 import camia_engine as engine
 import pytest
+import pytest_camia
 from camia_model.units import day, year
 
 import aviation
@@ -53,5 +54,4 @@ def test_systems_model_evaluate(
     expected: float,
 ) -> None:
     result = systems_model.evaluate(inputs, output)
-    # assert result == pytest.approx(expected, rel=0.1)  # noqa: ERA001
-    assert 0.9 * expected < result < 1.1 * expected
+    assert result == pytest_camia.approx(expected, rtol=0.1)

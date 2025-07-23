@@ -1,6 +1,7 @@
 import typing
 
 import pytest
+import pytest_camia
 from camia_model.units import Quantity, day, year
 
 from aviation.fleet import passengers_per_day, required_global_fleet
@@ -35,10 +36,5 @@ def test_required_global_fleet() -> None:
         seats_per_aircraft,
         flights_per_aircraft_per_day,
     )
-    tolerance = 10_000.0 * aircraft
-    # assert result == pytest.approx(expected_required_global_fleet, abs=tolerance)  # noqa: ERA001
-    assert (
-        expected_required_global_fleet - tolerance
-        < result
-        < expected_required_global_fleet + tolerance
-    )
+    tolerance = 10_000.0
+    assert result == pytest_camia.approx(expected_required_global_fleet, atol=tolerance)
