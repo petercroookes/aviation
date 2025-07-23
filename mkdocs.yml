@@ -1,6 +1,7 @@
 site_name: Aviation
 theme:
   name: material
+  logo: assets/aia_logo.jpg
 
 nav:
   - Home: "index.md"
