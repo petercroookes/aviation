@@ -2,8 +2,10 @@ import typing
 
 import camia_engine as engine
 import pytest
+from camia_model.units import day, year
 
 import aviation
+from aviation.units import aircraft, journey, passenger
 
 
 @pytest.fixture
@@ -14,22 +16,33 @@ def systems_model() -> engine.SystemsModel:
 @pytest.mark.parametrize(
     ("inputs", "output", "expected"),
     (
-        ({"passengers_per_year": 5_000_000_000.0}, "passengers_per_year", 5_000_000_000.0),
-        ({"required_global_fleet": 25_000.0}, "required_global_fleet", 25_000.0),
         (
-            {"passengers_per_year": 9_000_000_000.0, "days_per_year": 365.25},
-            "passengers_per_day",
-            24_640_657.0,
+            {"passengers_per_year": 5_000_000_000.0 * passenger / year},
+            "passengers_per_year",
+            5_000_000_000.0 * passenger / year,
+        ),
+        (
+            {"required_global_fleet": 25_000.0 * aircraft},
+            "required_global_fleet",
+            25_000.0 * aircraft,
         ),
         (
             {
-                "days_per_year": 365.25,
-                "passengers_per_year": 9_000_000_000.0,
-                "seats_per_aircraft": 181.0,
-                "flights_per_aircraft_per_day": 4.0,
+                "passengers_per_year": 9_000_000_000.0 * passenger / year,
+                "days_per_year": 365.25 * day / year,
+            },
+            "passengers_per_day",
+            24_640_657.0 * passenger / day,
+        ),
+        (
+            {
+                "days_per_year": 365.25 * day / year,
+                "passengers_per_year": 9_000_000_000.0 * passenger / year,
+                "seats_per_aircraft": 181.0 * passenger / aircraft,
+                "flights_per_aircraft_per_day": 4.0 * journey / (aircraft * day),
             },
             "required_global_fleet",
-            34_000.0,
+            34_000.0 * aircraft,
         ),
     ),
 )
@@ -40,4 +53,5 @@ def test_systems_model_evaluate(
     expected: float,
 ) -> None:
     result = systems_model.evaluate(inputs, output)
-    assert result == pytest.approx(expected, rel=0.1)
+    # assert result == pytest.approx(expected, rel=0.1)  # noqa: ERA001
+    assert 0.9 * expected < result < 1.1 * expected
