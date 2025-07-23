@@ -5,9 +5,11 @@ Modules:
 
 """
 
-__all__ = ("calculate_passengers_per_day", "calculate_required_global_fleet")
+__all__ = ("passengers_per_day", "required_global_fleet", "transforms")
 
 from aviation.fleet import (
-    calculate_passengers_per_day,
-    calculate_required_global_fleet,
+    passengers_per_day,
+    required_global_fleet,
 )
+
+transforms = (passengers_per_day, required_global_fleet)
