@@ -13,7 +13,7 @@ def calculate_passengers_per_day(passengers_per_year: float, days_per_year: floa
 
 
 def calculate_required_global_fleet(
-    passengers_per_day, seats_per_aircraft: float, flights_per_aircraft_per_day: float
+    passengers_per_day: float, seats_per_aircraft: float, flights_per_aircraft_per_day: float
 ) -> float:
     """Calculate the size of the required global fleet.
 
