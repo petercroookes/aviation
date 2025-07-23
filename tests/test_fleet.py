@@ -1,6 +1,6 @@
 import pytest
 
-from aviation.fleet import calculate_passengers_per_day, calculate_required_global_fleet
+from aviation.fleet import passengers_per_day, required_global_fleet
 
 
 @pytest.mark.parametrize(
@@ -13,10 +13,7 @@ from aviation.fleet import calculate_passengers_per_day, calculate_required_glob
 def test_passengers_per_day(
     passengers_per_year: float, days_per_year: float, expected_passengers_per_day: float
 ) -> None:
-    assert (
-        calculate_passengers_per_day(passengers_per_year, days_per_year)
-        == expected_passengers_per_day
-    )
+    assert passengers_per_day(passengers_per_year, days_per_year) == expected_passengers_per_day
 
 
 def test_required_global_fleet() -> None:
@@ -27,8 +24,8 @@ def test_required_global_fleet() -> None:
 
     expected_required_global_fleet = 25_000.0
 
-    result = calculate_required_global_fleet(
-        calculate_passengers_per_day(passengers_per_year, days_per_year),
+    result = required_global_fleet(
+        passengers_per_day(passengers_per_year, days_per_year),
         seats_per_aircraft,
         flights_per_aircraft_per_day,
     )
