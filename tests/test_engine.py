@@ -30,14 +30,12 @@ def systems_model() -> engine.SystemsModel:
         (
             {
                 "passengers_per_year": 9_000_000_000.0 * passenger / year,
-                "days_per_year": 365.25 * day / year,
             },
             "passengers_per_day",
             24_640_657.0 * passenger / day,
         ),
         (
             {
-                "days_per_year": 365.25 * day / year,
                 "passengers_per_year": 9_000_000_000.0 * passenger / year,
                 "seats_per_aircraft": 181.0 * passenger / aircraft,
                 "flights_per_aircraft_per_day": 4.0 * journey / (aircraft * day),
