@@ -1,6 +1,8 @@
 site_name: Aviation
 theme:
   name: material
+  palette:
+    primary: teal
   logo: assets/aia_logo.jpg
 
 nav:
@@ -13,7 +15,10 @@ markdown_extensions:
   - pymdownx.tilde
   - pymdownx.arithmatex:
       generic: true
-
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
